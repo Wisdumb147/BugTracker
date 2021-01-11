@@ -1,0 +1,74 @@
+<html class="BTbackground font">
+    <head>
+        <title class="special"></title>
+
+        <link href="https://fonts.googleapis.com/css2?family=Gugi&display=swap" rel="stylesheet"/>
+
+        <meta name="google-signin-client_id" content=process.env.GOOGLEKEYS</meta>
+        <script src= "https://apis.google.com/js/platform.js" async defer></script>
+        <link rel = "stylesheet" href="styles.css" />
+    </head>
+
+    <body class="special">
+
+        <hr class="background">
+
+        <h2 class="center">cyb3rspac3.digital</h2>
+                
+        <hr/>
+
+        <div class="g-signin2" data-onsuccess="onSignIn"></div>
+        <div id="content"></div>
+        <button class="button" onclick="signOut()">Sign Out</button>
+        <button class="button">Test 2</button>
+
+        <div class="flex-container">
+            <h1 class="bold">Bug Tracker v1.0 -></h1>
+            <a href="">
+                <img src="CyberBug.png" width=300 height=300/>
+            </a>
+            
+        </div>
+        <p>This is a bug tracker designed to track software bugs and security vulnerabilties integrating through HackerOne.</p>
+        
+        <p></p>
+        <ul class="bold">
+            <li>Bugs Tracker</li>
+            <li>Vulnerabilties</li>
+            <li><a href=https://www.wired.com/tag/security-research target="_blank"/>Security Research</li>
+            <li><a href="https://www.securityweek.com/" target="_blank"/>Security News</a>
+            </li>
+        </ul>
+    
+        <div>This is an ongoing security project to track my cybersecurtiy and development progress.</div>
+        <p></p>
+        <p>Security Engineering Project</p>
+        <ul class="bold">
+            <li>Aleinvault OSSIM</li>
+            <li>TripWire IDS</li>
+            <li>OSSEC HIDS</li>
+        </ul>
+        </u>
+        <video width="560" height="420" controls="controls">
+            <source src="AlienVaultSIEM.mp4" type="mp4">
+        </video>
+    </body>
+    <script>
+        function onSignIn(googleUser){
+            var profile = googleUser.getBasicProfile()
+            console.log('User is ' + JSON.stringfy(googleUser.profile))
+            
+            var element = document.querySelector('#content')
+            element.innerText = profile.getName();
+
+            var image = document.createElement('img')
+            image.setAttribute('src', profile.getImageUrl())
+            element.append(image)
+        }
+        function signOut(){
+            gapi.auth2.getAuthInstance().signOut().then(function() {
+                console.log('user signed out')
+            })
+        }
+    </script>
+</html>

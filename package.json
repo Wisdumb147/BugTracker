@@ -1,0 +1,20 @@
+{
+  "name": "BugTracker",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Wisdumb147/BugTracker.git"
+  },
+  "keywords": [],
+  "author": "Zak Hubner and Nick Buzzerio",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Wisdumb147/BugTracker/issues"
+  },
+  "homepage": "https://github.com/Wisdumb147/BugTracker#readme"
+}
