@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/Wisdumb147/BugTracker/issues"
   },
-  "homepage": "https://github.com/Wisdumb147/BugTracker#readme"
+  "homepage": "https://github.com/Wisdumb147/BugTracker#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
